@@ -1,0 +1,106 @@
+.header {
+    background-image: url(../images/Background.png);
+    height: 700px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include small-screen {
+        height: 540px;
+        @include background ('../images/Background_mobile.png');
+        background-repeat: repeat-x;
+    }
+}
+.header--nav {
+    p {
+        @include font-style(bold, 20px, 25px);
+        @include medium-screen {
+            margin: 45px 0 0 0;
+            padding-left: 48px; 
+            float: none;
+        }
+        @include small-screen {
+            margin: 0;
+            padding-top: 96px; 
+            float: none;
+            text-align: center;
+        }
+        margin-top: 45px;
+        margin-right: 79px; 
+        float: right;
+        color: $primary-color;     
+    }
+    .l-screen {
+        @include small-screen {
+            display: none;
+        }
+    }
+    div.m-screen {
+        @include large-screen {
+            display: none;
+        }
+        @include medium-screen {
+            display: none;
+        }
+    }
+}
+.header--nav ul {
+    @include small-screen {
+        margin: 20px 0 0 0; 
+        justify-content: center;
+    }
+    margin: 40px 0 0 54px;
+    li {
+        @include small-screen {
+            margin-right: 16px;
+            &:last-child {
+                margin-right: 0; 
+            }
+        }
+        margin-right: 19px;
+    }
+    a {
+        @extend %nav-link;
+    }
+}
+.header--title {
+    @include small-screen {
+        margin-top: 26.5px;
+    }
+    display: block;
+    margin-top: 156.5px;
+    .main {
+        @include small-screen {
+            @include font-style(bold, 30px, 37px);
+            width: 272px;
+        }
+        @include font-style(bold, 52px, 63px);
+        text-align: center;
+        color: $primary-color;
+        width: 470px;
+        margin: 0 auto;
+    }
+    .sub {
+        @extend .main;
+        @include small-screen {
+            @include font-style(300, 18px, 25px);
+            padding-top: 5.5px;
+            margin: 0 auto;
+            letter-spacing: 1px;
+        }
+        @include font-style(300, 24px, 25px);
+        margin-top: 27.5px;
+        color: #F7F3F2;
+    }
+    .header__button {
+        margin-top: 33px;
+        display: block;
+        text-align: center;
+        button {
+            @include small-screen {
+                padding: 11px 46.5px;
+                letter-spacing: 1.05px;
+            }
+            @extend %basic-button;
+            border: none;
+        }
+    }
+}

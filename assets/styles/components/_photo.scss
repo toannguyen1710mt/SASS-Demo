@@ -1,0 +1,71 @@
+.photo--A {
+    @include medium-screen {
+        padding: 0 20px;
+    }
+    @include small-screen {
+        @include background('../images/Step_1_mobile.png');
+        margin: 0;
+        padding: 0 30px 0 20px;
+        background-repeat: repeat-x;
+    }
+    @include background('../images/Step_1.png');
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    width: 33.33333333%;
+    padding: 0 25px;
+    div {
+        @include medium-screen {
+            margin-top: 205px;
+        }
+        @include small-screen {
+            margin-top: 64px;
+        }
+        margin-top: 219px;
+        button {
+            @extend %basic-button;
+            font-size: 10px;
+            line-height: 13px;
+            padding: 1.5px 12px;
+        }
+    }
+    .title {
+        @include font-style(bold, 24px, 14px);
+        text-align: left;
+        color: $primary-color;
+        margin: 45px 0 0 0;
+    }
+    .subtitle {
+        @include medium-screen {
+            margin: 26px 0 16px 0;
+            letter-spacing: 0px;
+        }
+        @include small-screen {
+            margin: 25px 0 16px 0; 
+        }
+        @extend .title;
+        @include font-style(300, 14px, 14px);
+        color: #E3E3E3;
+        margin: 25px 0 21px 0;
+    }
+}
+.photo--B {
+    @extend .photo--A;
+    @include small-screen {
+        padding-top: 10px;
+        @include background('../images/Step_2_mobile.png');
+        margin: 10px 0;
+        padding: 0 30px 0 20px;
+        background-repeat: repeat-x;
+    }
+    background-image: url('../images/Step_2.png');
+}
+.photo--C {
+    @extend .photo--A;
+    @include small-screen {
+        @include background('../images/Step_3_mobile.png');
+        padding: 0 30px 0 20px;
+        background-repeat: repeat-x;
+    }
+    @include background('../images/Step_3.png');
+    margin-right: 0;
+}

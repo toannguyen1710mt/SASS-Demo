@@ -1,0 +1,106 @@
+.footer {
+    @include medium-screen {
+        margin-top: 100px;
+    }
+    @include small-screen {
+        margin-top: 40px;
+    }
+    margin-top: 353px;
+    border-top: 2px solid $secondary-color;
+}
+.dream {
+    @include medium-screen {
+        padding-left: 39px;
+    }
+    padding: 0;
+    p {
+        @include small-screen {
+            margin: 19px 0 0 0;
+            text-align: center;
+        }
+        @include font-style(normal, 16px, 20px);
+        margin-top: 36px;
+        color: $secondary-color;
+    }
+}
+.contact {
+    padding: 0;
+    p {
+        @include small-screen {
+            text-align: center;
+            margin: 12px 0 0 0;
+        }
+        @include font-style(bold, 14px, 18px);
+        color: $subtitle-color;
+        margin-top: 37px ;
+    }
+    ul.l-screen {
+        @include small-screen {
+            display: none;
+        }
+        margin-top: 15.6px;
+        height: 171.6px;
+        display: block;
+    }
+    ul.s-screen {
+        margin-top: 5.6px;
+        @include large-screen {
+            display: none;
+        }
+        @include medium-screen {
+            display: none;
+        }
+    }
+    a {
+        @include font-style(normal, 14px, 26px);
+        padding: 0;
+        margin-right: 15px;
+        color: #999999;
+        &:hover {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+}
+.partner {
+    @include medium-screen {
+        padding-left: 42px;
+    }
+    padding: 0;
+    p {
+        @include small-screen {
+            margin-top: 0.4px ;
+            text-align: center;
+        }
+        @include font-style(bold, 14px, 18px);
+        color: $subtitle-color;
+        margin-top: 37px ;
+    }
+}
+.logo {
+    @include medium-screen {
+        padding-right: 40px;
+    }
+    padding: 0;
+    p {
+        @include small-screen {
+            margin-top: 13px;
+            padding: 0;
+            text-align: center;
+        }
+        @include font-style(bold,10px,12px);
+        color: #CCCCCC;
+        text-align: right;
+        margin: 37px 0 0 0;
+    }
+    img {
+        @include small-screen {
+            float: none;
+            display: block;
+            margin-right:  auto;
+            margin-left:  auto;
+        }
+        float: right;
+        margin-top: 7px;
+    }
+}

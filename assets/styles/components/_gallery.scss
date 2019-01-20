@@ -1,0 +1,95 @@
+div.gallery--A {
+    @include small-screen {
+        @include background ('../images/Sport_mobile.png');
+        margin: 0;
+        background-repeat: repeat-x;
+    }
+    @include background ('../images/Sport.png');
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    width: 33.33333333%;
+    padding: 0;
+    p {
+        @include small-screen {
+            padding: 47px 47px;
+        }
+        @include font-style(bold, 22px, 27px);
+        text-align: center;
+        color: $primary-color;
+        margin: 0 auto;
+        padding: 141.5px 0;
+    }
+}
+div.gallery--B {
+    @include small-screen {
+        @include background ('../images/Healthy_mobile.png');
+    }
+    p {
+        @include small-screen  {
+            padding: 33px 47px;
+        }
+    }
+    @extend .gallery--A;
+    background-image: url('../images/Healthy.png');
+}
+div.gallery--C {
+    @include small-screen {
+        @include background ('../images/Extreme_mobile.png');
+    }
+    @extend .gallery--A;
+    @include background ('../images/Extreme.png');
+    margin-right: 0;
+    p {
+        @include small-screen  {
+            padding: 33px 47px;
+        }
+        padding: 128px 0;
+    }
+}
+div.gallery--D {
+    @include medium-screen {
+        width: 32.327%;
+    }
+    @include small-screen {
+        @include background ('../images/Games_mobile.png');
+    }
+    @extend .gallery--A;
+    @include background ('../images/Games.png');
+    width: 32.60869%;
+}
+div.gallery--E {
+    @include small-screen {
+        @include background ('../images/Culture_mobile.png');
+    }
+    p {
+        @include small-screen  {
+            padding: 47px 20px;
+        }
+    }
+    @extend .gallery--A;
+    width: 67.3913%;
+    @include background ('../images/Culture.png');
+    margin-right: 0; 
+}
+div.gallery--F {
+    @include small-screen {
+        @include background ('../images/Relaxing_mobile.png');
+        margin-right: 0;
+    }
+    p {
+        @include small-screen  {
+            padding: 47px 11px;
+        }
+    }
+    @extend .gallery--E;
+    margin-right: 20px;
+    @include background ('../images/Relaxing.png'); 
+}
+div.gallery--G {
+    @include small-screen {
+        @include background ('../images/Travelling_mobile.png');
+    }
+    @extend .gallery--D;
+    margin: 0;
+    @include background ('../images/Travelling.png');
+}

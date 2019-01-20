@@ -1,0 +1,32 @@
+.profile {
+    @include small-screen {
+        padding: 0 42px;
+        margin-top: 16px;
+        &:first-child {
+            margin-top: 14px;
+        }
+    }
+    padding:0 9px 0 10px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .title {
+        @include font-style(bold, 14px, 18px);
+        text-align: center;
+        color: $subtitle-color;
+        margin: 17px  auto 12px auto;
+    }
+    .subtitle {
+        @include font-style(300, 14px, 19px);
+        text-align: center;
+        color: #666666;
+        margin: 0 auto;
+    }
+}
+.profile--Marie-Bennett {
+    margin-top: 54px;
+}
+.profile--Christopher-Pierce {
+    margin-top: 35px;
+}

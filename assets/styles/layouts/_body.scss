@@ -1,0 +1,162 @@
+@include medium-screen {
+    .container {
+        max-width: 960px;
+    }
+}
+.content {
+    margin-top: 94px;
+    @include small-screen {
+        margin-top: 35px;
+    }
+    p {
+        @include small-screen {
+            margin:  0 0 15px 0;
+        }
+        @include font-style(bold, 22px, 27px);
+        margin: 0 0 35px 0;
+        text-align: center;
+        color: $subtitle-color;
+    }
+    form {
+        @include small-screen {
+            padding-top: 15px;
+            display: block;
+            text-align: center;
+        }
+        margin-top: 25px;
+        input {
+            @include small-screen {
+                width: 100%;
+                margin-right: 0;
+            }
+            @include font-style(normal, 14px, 16px);
+            padding: 10px 0 10px 14.6px;
+            margin-right: 10px;
+            width: 62.033195%;
+        }
+        button {
+            @include small-screen {
+                padding: 11px 81.5px;
+                text-align: center;
+                margin-top: 10px
+            }
+            @extend %basic-button;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 11px 27px;
+            border: none;
+            letter-spacing: 0.8px;
+        }
+    }
+    .body__button {
+        display: block;
+        text-align: center;
+        button {
+            @include medium-screen {
+                margin-top: 40px;
+            }
+            @extend %basic-button;
+            background-color: $primary-color;
+            color: $secondary-color;
+            padding: 11px 19px 11px 24px;
+            margin-top: 36px; 
+            letter-spacing: 0;
+        }
+    }
+}
+.content__photo .d-flex {
+    padding : 0 10px;
+}
+.content__photo {
+    @include small-screen {
+        display: none;
+    }
+}
+.content__photo--s-screen {
+    padding: 0 10px;
+    @include large-screen {
+        display: none;
+    }
+    @include medium-screen {
+        display: none;
+    }
+}
+.content--l-screen {
+    @include medium-screen {
+        display: none;
+    } 
+    @include small-screen {
+        padding: 0 20px;
+    }
+}
+.content--m-screen {
+    @include large-screen {
+        display: none;
+    } 
+    @include small-screen {
+        display: none;
+    } 
+}
+.content--s-screen {
+    p {
+        @include small-screen {
+            padding: 0 20px;
+            margin-bottom: 33px;
+        }
+    }
+}
+.content__gallery  {
+    @include small-screen {
+        display: none;
+    } 
+    .d-flex{
+        margin-top: 20px;  
+        padding: 0 10px;
+    }
+}
+.content__gallery .justify-content-between {
+    margin-top: 0;
+    padding: 0 10px;
+}
+.content__gallery--s-creen {
+    padding: 0 10px;
+    width: 106.67%;
+    @include large-screen {
+        display: none;
+    } 
+    @include medium-screen {
+        display: none;
+    } 
+    @include small-screen {
+        div {
+            margin-top: 10px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    } 
+}
+.content--search-box {
+    p {
+        @include small-screen {
+        padding: 0 20px;
+        margin: 0;
+        }
+    }
+    .subtitle {
+        @include small-screen {
+            margin-top: 9px;
+            }    
+        @include font-style(300, 18px, 14px);
+        font-family: Roboto;
+        color: #666666;
+        margin: 0;
+        padding: 0;
+    }
+    @include large-screen {
+        display: none;
+    }
+    @include small-screen {
+        margin-top: 35px;
+    }
+}
